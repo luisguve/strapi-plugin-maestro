@@ -1,4 +1,4 @@
-# Strapi Plugin Masterclass
+# Strapi Plugin Maestro
 
 Transform your Strapi app into a Learning Management System to create and sell courses online effortlessly.
 
@@ -28,7 +28,7 @@ Transform your Strapi app into a Learning Management System to create and sell c
 In the root of your strapi application, run the following command:
 
 ```
-npm i strapi-plugin-masterclass
+npm i strapi-plugin-maestro
 ```
 
 ## Configuring .env variables
@@ -51,7 +51,7 @@ Finally, add the following configuration in config/plugins.ts:
 
 ```
 export default ({ env }: { env: any }) => ({
-  "masterclass": {
+  "maestro": {
     enabled: true,
     config: {
       stripeSecretKey: env('STRIPE_SECRET_KEY'),
@@ -76,7 +76,7 @@ And that's it, now you can start the server with `npm run develop`.
 
 ## Setting up permissions
 
-In order for the plugin to serve content, manage users and create and confirm orders, you must enable some endpoints in the Users & Permissions Pluginfor the Masterclass plugin.
+In order for the plugin to serve content, manage users and create and confirm orders, you must enable some endpoints in the Users & Permissions Pluginfor the Maestro plugin.
 
 For Authenticated users, enable the following:
 
@@ -122,7 +122,7 @@ From orders:
 Creating courses is done through the Strapi Admin Dashboard.
 
 ## API
-The Masterclass plugin exposes a REST API for managing and consuming courses, categories, orders, and user progress. Below is a list of available endpoints, grouped by resource, with their methods, paths, authentication requirements, and descriptions.
+The Maestro plugin exposes a REST API for managing and consuming courses, categories, orders, and user progress. Below is a list of available endpoints, grouped by resource, with their methods, paths, authentication requirements, and descriptions.
 
 ---
 
@@ -260,4 +260,4 @@ See the `server/src/content-types/` directory for full schema details.
 
 ## Bug reports
 
-If you find a bug or need support for using this plugin, open an issue at https://github.com/luisguve/strapi-plugin-masterclass
+If you find a bug or need support for using this plugin, open an issue at https://github.com/luisguve/strapi-plugin-maestro

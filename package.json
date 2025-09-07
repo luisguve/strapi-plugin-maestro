@@ -1,13 +1,13 @@
 {
-  "name": "strapi-plugin-masterclass",
-  "version": "5.1.2",
-  "description": "Masterclass plugin",
+  "name": "strapi-plugin-maestro",
+  "version": "5.2.0",
+  "description": "Maestro plugin",
   "keywords": ["strapi", "strapi-plugin", "LMS", "Learning Management System", "mux"],
   "license": "MIT",
   "author": "Luis G. Villegas <luisguveal@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/luisguve/strapi-plugin-masterclass"
+    "url": "git://github.com/luisguve/strapi-plugin-maestro"
   },
   "type": "commonjs",
   "exports": {
@@ -72,8 +72,8 @@
   },
   "strapi": {
     "kind": "plugin",
-    "name": "masterclass",
-    "displayName": "Masterclass LMS",
+    "name": "maestro",
+    "displayName": "Maestro LMS",
     "description": "Transform your Strapi app into a Learning Management System to create and sell courses online effortlessly."
   }
 }
