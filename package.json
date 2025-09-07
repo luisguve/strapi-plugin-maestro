@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-maestro",
-  "version": "5.2.0",
+  "version": "6.0.0",
   "description": "Maestro plugin",
   "keywords": ["strapi", "strapi-plugin", "LMS", "Learning Management System", "mux"],
   "license": "MIT",

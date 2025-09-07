@@ -12,6 +12,7 @@ Transform your Strapi app into a Learning Management System to create and sell c
 
 - Strapi V5.x.x
 - Must have installed [strapi-plugin-mux-video-uploader](https://www.npmjs.com/package/strapi-plugin-mux-video-uploader)
+- Must have installed [@strapi/plugin-seo](https://www.npmjs.com/package/@strapi/plugin-seo)
 - Mux account
   - Access token ID
   - Secret Key
