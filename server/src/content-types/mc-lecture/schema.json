@@ -30,7 +30,7 @@
     "module": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "plugin::masterclass.mc-module",
+      "target": "plugin::maestro.mc-module",
       "inversedBy": "lectures"
     },
     "description": {

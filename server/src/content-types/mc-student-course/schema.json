@@ -14,7 +14,7 @@
     "course": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "plugin::masterclass.mc-course",
+      "target": "plugin::maestro.mc-course",
       "inversedBy": "students"
     },
     "student": {
@@ -26,12 +26,12 @@
     "current_lecture": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::masterclass.mc-lecture"
+      "target": "plugin::maestro.mc-lecture"
     },
     "lectures_completed": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "plugin::masterclass.mc-lecture"
+      "target": "plugin::maestro.mc-lecture"
     }
   }
 }

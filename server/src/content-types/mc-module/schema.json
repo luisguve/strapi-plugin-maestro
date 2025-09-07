@@ -21,13 +21,13 @@
     "course": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "plugin::masterclass.mc-course",
+      "target": "plugin::maestro.mc-course",
       "inversedBy": "modules"
     },
     "lectures": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "plugin::masterclass.mc-lecture",
+      "target": "plugin::maestro.mc-lecture",
       "mappedBy": "module"
     },
     "slug": {

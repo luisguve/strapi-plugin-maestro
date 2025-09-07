@@ -1,2 +1,2 @@
-export const PLUGIN_NAME = 'masterclass';
-export const CONFIG_NAME = 'masterclass';
+export const PLUGIN_NAME = 'maestro';
+export const CONFIG_NAME = 'maestro';

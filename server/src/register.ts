@@ -11,7 +11,7 @@ const register = ({ strapi }: { strapi: Core.Strapi }) => {
     courses: {
       type: 'relation',
       relation: 'oneToMany',
-      target: 'plugin::masterclass.mc-student-course',
+      target: 'plugin::maestro.mc-student-course',
       mappedBy: 'student',
     },
   };

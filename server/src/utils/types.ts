@@ -3,7 +3,7 @@ import { StripeService } from '../services/stripe';
 import { PaypalService } from '../services/paypal';
 import { CoursesService } from '../services/courses';
 
-const pluginId = 'masterclass';
+const pluginId = 'maestro';
 
 export type ServiceName = 'paypal' | 'stripe' | 'payments' | 'courses';
 export type ServiceType<T> = T extends 'paypal' ? 

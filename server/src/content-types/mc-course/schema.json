@@ -54,7 +54,7 @@
     "category": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "plugin::masterclass.mc-category",
+      "target": "plugin::maestro.mc-category",
       "inversedBy": "courses"
     },
     "slug": {
@@ -64,19 +64,19 @@
     "students": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "plugin::masterclass.mc-student-course",
+      "target": "plugin::maestro.mc-student-course",
       "mappedBy": "course"
     },
     "modules": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "plugin::masterclass.mc-module",
+      "target": "plugin::maestro.mc-module",
       "mappedBy": "course"
     },
     "instructor": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "plugin::masterclass.mc-instructor",
+      "target": "plugin::maestro.mc-instructor",
       "inversedBy": "courses"
     },
     "seo": {
