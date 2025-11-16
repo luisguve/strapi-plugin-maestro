@@ -58,6 +58,8 @@ const controller = ({ strapi }: { strapi: Core.Strapi }) => ({
         total_lectures: totalLectures
       }
     });
+    console.log("courses:")
+    console.dir(courses)
     ctx.body = { courses }
   },
   async findOne(ctx: Context) {
