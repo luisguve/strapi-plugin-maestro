@@ -17,14 +17,6 @@ export default [
   },
   {
     method: 'GET',
-    path: '/courses',
-    handler: 'courses.find',
-    config: {
-      policies: [],
-    }
-  },
-  {
-    method: 'GET',
     path: '/courses/:slug',
     handler: 'courses.findOne',
     config: {
