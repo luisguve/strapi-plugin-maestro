@@ -166,6 +166,9 @@ const controller = ({ strapi }: { strapi: Core.Strapi }) => ({
         },
       }
     });
+    if (!course) {
+      return ctx.notFound(`course with slug ${slug} not found`);
+    }
     const totalLectures = course.modules.reduce((acc, module) => {
       return acc + module.lectures.length
     }, 0)
