@@ -10,13 +10,14 @@
   "options": {
     "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
     "duration": {
       "type": "integer",
       "configurable": false
+    },
+    "title": {
+      "type": "string"
     },
     "description": {
       "type": "blocks"
@@ -78,6 +79,9 @@
       "relation": "manyToOne",
       "target": "plugin::maestro.mc-instructor",
       "inversedBy": "courses"
+    },
+    "highlighted": {
+      "type": "boolean"
     }
   }
 }
