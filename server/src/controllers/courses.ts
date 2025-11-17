@@ -60,6 +60,66 @@ const controller = ({ strapi }: { strapi: Core.Strapi }) => ({
     });
     ctx.body = { courses }
   },
+  async findHighlighted(ctx: Context) {
+    let courses = await strapi.documents(COURSE_MODEL).findMany({
+      filters: {
+        highlighted: { $eq: true }
+      },
+      populate: {
+        seo: {
+          populate: {
+            metaImage: {
+              fields: ["alternativeText", "url"]
+            },
+            openGraph: {
+              populate: {
+                ogImage: {
+                  fields: ["alternativeText", "url"]
+                }
+              }
+            }
+          }
+        },
+        thumbnail: {
+          fields: ["name", "url"]
+        },
+        modules: {
+          fields: ["title", "duration", "slug"],
+          populate: {
+            lectures: {
+              fields: ["title", "duration", "slug", "description"],
+            }
+          }
+        },
+        category: {
+          fields: ["slug", "title", "id"]
+        },
+        students: {
+          fields: ["documentId"]
+        },
+        instructor: {
+          fields: ["name", "slug", "bio", "designation"],
+          populate: {
+            image: {
+              fields: ["name", "url"]
+            }
+          }
+        }
+      }
+    });
+    // Add the number of students and total lectures to each course
+    courses = courses.map(course => {
+      const totalLectures = course.modules.reduce((acc, module) => {
+        return acc + module.lectures.length
+      }, 0)
+      return {
+        ...course,
+        total_students: course.students.length,
+        total_lectures: totalLectures
+      }
+    });
+    ctx.body = { courses }
+  },
   async findOne(ctx: Context) {
     const { slug } = ctx.params
     let course = await strapi.documents(COURSE_MODEL).findFirst({

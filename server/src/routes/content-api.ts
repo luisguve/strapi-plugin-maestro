@@ -25,6 +25,14 @@ export default [
   },
   {
     method: 'GET',
+    path: '/highlighted-courses',
+    handler: 'courses.findHighlighted',
+    config: {
+      policies: [],
+    }
+  },
+  {
+    method: 'GET',
     path: '/courses/:slug',
     handler: 'courses.findOne',
     config: {
