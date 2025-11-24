@@ -1,1 +1,1 @@
-export const PLUGIN_ID = 'masterclass';
+export const PLUGIN_ID = 'maestro';

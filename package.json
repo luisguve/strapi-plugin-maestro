@@ -1,8 +1,14 @@
 {
   "name": "strapi-plugin-maestro",
-  "version": "6.0.13",
+  "version": "6.1.0",
   "description": "Maestro plugin",
-  "keywords": ["strapi", "strapi-plugin", "LMS", "Learning Management System", "mux"],
+  "keywords": [
+    "strapi",
+    "strapi-plugin",
+    "LMS",
+    "Learning Management System",
+    "mux"
+  ],
   "license": "MIT",
   "author": "Luis G. Villegas <luisguveal@gmail.com>",
   "repository": {
@@ -44,7 +50,7 @@
     "@strapi/icons": "^2.0.0-rc.21",
     "axios": "^1.8.4",
     "react-intl": "^7.1.10",
-    "stripe": "^18.0.0",
+    "stripe": "^20.0.0",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
@@ -61,13 +67,13 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
+    "@strapi/plugin-seo": "2.0.8",
     "@strapi/sdk-plugin": "^5.3.2",
     "@strapi/strapi": "^5.23.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.30.0",
     "strapi-plugin-mux-video-uploader": "^3.0.1",
-    "@strapi/plugin-seo": "2.0.8",
     "styled-components": "^6.1.17"
   },
   "strapi": {
