@@ -182,7 +182,17 @@ const controller = ({ strapi }: { strapi: Core.Strapi }) => ({
   async findSlugs(ctx: Context) {
     const courses = await strapi.documents(COURSE_MODEL).findMany({
       filters: {},
-      fields: ["slug"]
+      fields: ["slug"],
+      populate: {
+        modules: {
+          fields: ["slug"],
+          populate: {
+            lectures: {
+              fields: ["slug"]
+            }
+          }
+        }
+      }
     })
     ctx.body = { courses }
   },
